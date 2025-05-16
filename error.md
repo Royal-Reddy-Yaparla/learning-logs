@@ -12,3 +12,9 @@
         - AmazonEKS_CNI_Policy
         - AmazonEKSWorkerNodePolicy
         - AmazonEC2ContainerRegistryReadOnly
+
+
+
++ cd /var/lib/jenkins/workspace/bakend/helm-backend
++ helm upgrade --install backend -n fusioniq .
+Error: query: failed to query with labels: secrets is forbidden: User "system:node:ip-172-31-44-201.ec2.internal" cannot list resource "secrets" in API group "" in the namespace "fusioniq": No Object name found
