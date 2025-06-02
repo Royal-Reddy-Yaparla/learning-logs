@@ -1,0 +1,13 @@
+shell module will be logged in target instance and excute the command , it logged into target instance not 
+secute , because permissions wise, we can do not logged into target instance , by command , like execute the 
+commands from outside of the instance , which is secure 
+
+cannot use special shell features like pipes (|), redirection (>, >>), or chaining commands (&&, ||).
+
+- prefernce 
+ 1. command
+ 2. shell (if not work command when pipeing etc)
+
+
+ why is command secure and why not shell
+ 

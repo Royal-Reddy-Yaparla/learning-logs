@@ -1,0 +1,5 @@
+nohup vs & background running
+tail -f
+ansible install by userdata
+ansible tags
+ansible mysql community module

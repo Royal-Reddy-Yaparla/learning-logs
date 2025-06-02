@@ -1,0 +1,43 @@
+
+Ansible works with push mechanism and ssh connctions 
+
+make sure remote server connection
+ansible all -i <IP>,<OP>, -e ansible_user=ec2-user  -e ansible_password=DevOps321 -m ping
+ansible all -i 172.31.82.94,172.31.93.179, -e ansible_user=ec2-user  -e ansible_password=DevOps321 -m ping
+
+------------------------------------------------------------
+will Ask in interview simple write a playbook
+
+playbook
+multi play 
+hellow world
+
+connect to local 
+print module
+
+to coonect remote
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 <target_file>
+
+for local
+ansible-playbook -i inventory.ini <target_file>
+
+adhoc commands
+for one-time task and emergency task 
+
+nginx 
+package module 
+service module -start and enable 
+
+sudo permissions
+
+variables
+    - play-level
+    - task-level 
+    - variables-by-files
+    - prompt
+    - inventory-level
+    - arguments
+    - var preference
+    - conditions
+
+-------------------------------------------------------------------------------------
