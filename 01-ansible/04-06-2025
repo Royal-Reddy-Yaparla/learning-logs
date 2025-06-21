@@ -1,0 +1,19 @@
+
+- tags
+- downtime deploy new version
+    - stop service
+    - remove and create again /app
+    - download application
+        - download and unachive in a single task
+    - install depedencies 
+    - restart service
+- import role vs include role ***
+
+- ansible error handling
+    igoner_error: true
+
+- vault
+
+-ssm parameter store
+    - aws platform as service 
+    

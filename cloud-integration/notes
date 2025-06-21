@@ -1,0 +1,70 @@
+stages:
+1) preparation
+    first need to check current architecture of application.wheather it is microservices or monolitic  
+    if application is monolitic , need to transform then into microservices , the reason for it , being  
+    cloud native application , in container should be lightweight and easy managing process microservices will be 
+    more useful and container orchestration friendly.
+
+    if application in microservices we can skip the preparation stage 
+
+2) planning
+   lets imagine there are 200 microservices are there , catogirize them into phases beased on critical 
+   here the planning process would be two parts
+   - deciding phases
+            - low-level critical first - 60 services
+            - medium-level critical    - 50 services
+            - higher-level critical    - 20 services
+            - critical-level           - 20 services
+            - most-critical-level last - 50 services
+   - choosing cloud migration strategy
+            most-widly used
+            - Rehost : lift and shift 
+            - Replatform : 
+            - Refactor/Rearchitechture
+-------------------------------------------
+            - Repurchase
+            - Relocate
+            - Retire
+            - Retain 
+        more: https://www.google.com/search?q=cloud+migration+strategies+in+cloud+computing+medium+blog&sca_esv=151ca6e1c4e16aad&rlz=1C1MMCH_enIN1126IN1126&sxsrf=AE3TifMXcJiQNpj57my_p_4z5VOeoOtl2A%3A1750400998527&ei=5v9UaIHtH_ehnesPkcaqyQk&oq=cloud+migration+strategies+in+cloud+computing+medi&gs_lp=Egxnd3Mtd2l6LXNlcnAiMmNsb3VkIG1pZ3JhdGlvbiBzdHJhdGVnaWVzIGluIGNsb3VkIGNvbXB1dGluZyBtZWRpKgIIATIHECEYoAEYCjIHECEYoAEYCjIHECEYoAEYCkjRHFAmWJIScAF4AZABAJgBugGgAZsGqgEDMC41uAEByAEA-AEBmAIGoALiBsICChAAGLADGNYEGEfCAgYQABgWGB7CAgsQABiABBiGAxiKBcICCBAAGKIEGIkFwgIIEAAYgAQYogTCAgUQIRigAcICBBAhGBWYAwCIBgGQBgiSBwUxLjQuMaAH7xuyBwUwLjQuMbgHygbCBwcyLTQuMS4xyAc3&sclient=gws-wiz-serp
+
+3) migration: this process will take time based on project ,took 1,2 or 3 years.
+    - scripting 
+        - terraform 
+        - scripting
+    
+4) monitor: 
+    - cloud watch 
+    - promethues and grafana 
+
+5) improve/optimize: 
+        for 2 to 3 months monitoring is required based on criticality.
+
+6) evaluation: 
+    - what we achieved specify those
+        - cost optimization 40% , according to that we need to improve/optimize process 
+    
+-------------------------------------------
+7R's Strategy 
+- Rehost: popular simple and easy method one , simple lift and shift - here simple as it is same environment in AWS and shift , 
+less effort method. with basic scalability and efficiecy , need to enhance later.
+- Refactor: monolith to microservices.
+- Replatform: similar to Rehost,but here we can implement best pracice , autoscaling kubernetes etc 
+
+- Retain: like hybrid , some serices is maitained in onpremises instead of AWS example bank-app ,payment related serives in onpremises.
+
+- Retaire: no migrating because no one is using services.
+- Relocate: example kubernetes cluster in onpremise , then migrating AWS EKS , need to be careful while migrating 
+- Repurchase: for example our onpremises VM ware , we need to move same VMware kind into cloud or purchage similar things. very rare.
+
+the thing to remember , migration projects will run years.
+---------------------------------------------
+Database-migration 
+- migrating databases be causious 
+    - similar platform or services to FIT 
+        must relable , for example on premises using mysql , in AWS RDS same MYSQL with 
+
+    - must maintain backups 
+        - chance to loose database.
+        - while migrating , if goes wrong , for immedialty roleback 
+            

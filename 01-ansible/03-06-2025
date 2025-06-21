@@ -1,0 +1,26 @@
+
+Ansible-Roles
+- reusability 
+- folder structure 
+
+while explaining answer , add on tool/tech importance , what are the issues it is resolving 
+
+Shift+tab
+
+all:vars
+
+ansible template
+- jinja2 format .j2
+
+
+ansible.builtin.copy -> template
+
+each repo - purpose     
+- task 
+- files
+- templates
+- vars
+
+ansible handlers 
+
+Platform engineering
